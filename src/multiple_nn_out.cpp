@@ -1,4 +1,4 @@
-#include "../include/multiple_nn_out.h"
+#include "/root/cml3/include/multiple_nn_out.h"
 #include <cmath>
 #include <iostream>
 #include <stdio.h>

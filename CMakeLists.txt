@@ -8,11 +8,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(NAME "Ansu")
 message("This project has been made by ${NAME}.")
 
+
+
+
 add_library(libraries
             src/multiple_nn_out.cpp)
 
+
 add_executable(main
-            src/main.cpp)
+            src/main.cpp)            
+
+
             
 
 target_include_directories(libraries PUBLIC include)

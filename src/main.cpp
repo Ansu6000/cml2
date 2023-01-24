@@ -3,8 +3,8 @@
 #include <iostream>
 #define IN_LEN 3
 #define OUT_LEN 3
-#include "../include/multiple_nn_out.h"
-#include "multiple_nn_out.cpp"
+#include "/root/cml3/include/multiple_nn_out.h"
+#include "/root/cml3/src/multiple_nn_out.cpp"
 #define Sad 0.9
 
 #define SAD_PREDICTION_IDX 0
