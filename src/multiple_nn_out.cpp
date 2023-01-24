@@ -1,8 +1,7 @@
-#include "/root/cml3/include/multiple_nn_out.h"
+#include "../include/multiple_nn_out.h"
 #include <cmath>
 #include <iostream>
 #include <stdio.h>
-#include "multiple_nn_out.h"
 
 double single_in_single_out(double input, double weight) 
 {
@@ -29,7 +28,7 @@ void elementwise_multiply(double * input_scaler, double * weight_vector, double 
 {
     for(int i = 0; i < LEN; i++)
     {
-        output_vector[i] = input_scaler * weight_vector[i];
+        output_vector[i] = input_scaler[0] * weight_vector[i];
     }
 }
 
@@ -42,7 +41,7 @@ void matrix_vector_multiply(double *input_vector,
                             int INPUT_LEN,
                             double *output_vector,
                             int OUTPUT_LEN,
-                            double weight_matrix[][])
+                            double weight_matrix[][IN_LEN])
 {
     for(int k = 0; k < OUTPUT_LEN; k++)
     {
@@ -57,7 +56,7 @@ void multiple_input_multiple_output_nn(double * input_vector,
                                        int INPUT_LEN,
                                        double * output_vector,
                                        int OUTPUT_LEN,
-                                       double weight_matrix[OUTPUT_LEN] [INPUT_LEN])
+                                       double weight_matrix[][IN_LEN])
 {
     matrix_vector_multiply(input_vector, INPUT_LEN, output_vector, OUTPUT_LEN, weight_matrix);
 }
